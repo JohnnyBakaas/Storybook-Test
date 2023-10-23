@@ -1,0 +1,6 @@
+.title {
+  text-shadow: 0.1em -0.1em 0px rgb(255, 255, 0),
+    0.2em -0.2em 0px rgb(0, 255, 255), 0.3em -0.3em 0px rgb(255, 0, 255);
+  padding: 0.3em 0.3em 0em 0em;
+  margin: 0;
+}
