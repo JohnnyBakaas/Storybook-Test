@@ -6,12 +6,5 @@ interface FancyTitleProps {
 }
 
 export const FancyTitle = ({ title, mode }: FancyTitleProps) => {
-  return (
-    <h1
-      className="title"
-      style={mode == "light" ? { color: "black" } : { color: "white" }}
-    >
-      {title}
-    </h1>
-  );
+  return <h1 className={["title", mode].join(" ")}>{title}</h1>;
 };
