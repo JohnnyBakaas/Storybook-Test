@@ -97,10 +97,13 @@ export const DatePicker = ({ setDate }: DatePickerProps) => {
                           setSelectedDay(e.getTime());
                           setDate(new Date(e.getTime()));
                         }
-                      : () =>
+                      : () => {
+                          setSelectedDay(e.getTime());
+                          setDate(new Date(e.getTime()));
                           setMonthOffset(
                             (pre) => pre + e.getMonth() - days[2][2].getMonth()
-                          )
+                          );
+                        }
                   }
                 >
                   {e.getDate()}
