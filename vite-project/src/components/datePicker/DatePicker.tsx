@@ -5,7 +5,7 @@ interface DatePickerProps {
   setDate: (date: Date) => void;
 }
 
-export const DatePicker = ({}: DatePickerProps) => {
+export const DatePicker = ({ setDate }: DatePickerProps) => {
   const months = [
     "Januar",
     "Februar",
@@ -93,7 +93,10 @@ export const DatePicker = ({}: DatePickerProps) => {
                   }
                   onClick={
                     e.getMonth() == days[2][2].getMonth()
-                      ? () => setSelectedDay(e.getTime())
+                      ? () => {
+                          setSelectedDay(e.getTime());
+                          setDate(new Date(e.getTime()));
+                        }
                       : () =>
                           setMonthOffset(
                             (pre) => pre + e.getMonth() - days[2][2].getMonth()

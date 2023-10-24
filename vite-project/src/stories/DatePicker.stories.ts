@@ -9,13 +9,15 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
+      setDate: (date: Date) => {}
     },
   } satisfies Meta<typeof DatePicker>;
   
   export default meta;
   type Story = StoryObj<typeof meta>;
-
-  export const Primary: Story = {
+  
+  export const DatePickerStandard: Story = {
     args: {
+      setDate: (date: Date) => {}
     }
   };
